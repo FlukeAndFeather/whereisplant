@@ -24,5 +24,9 @@ ca_basemap <- get_map(location = basemap_bbox,
 # Make the map
 # Ignore the "Coordinate system already present" message
 ggmap(ca_basemap) +
-  geom_sf(data = sampling_sites, inherit.aes = FALSE) +
+  geom_sf(data = sampling_sites,
+          size = 1.5,
+          color = "blueviolet",
+          alpha = 0.5,
+          inherit.aes = FALSE) +
   theme(axis.title = element_blank())

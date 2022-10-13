@@ -25,8 +25,10 @@ ca_basemap <- get_map(location = basemap_bbox,
 # Ignore the "Coordinate system already present" message
 ggmap(ca_basemap) +
   geom_sf(data = sampling_sites,
-          size = 1.5,
+          size = 1,
           color = "blueviolet",
           alpha = 0.5,
           inherit.aes = FALSE) +
   theme(axis.title = element_blank())
+
+ggsave("nemophila_sampling.png", width = 120, height = 120, unit = "mm")
